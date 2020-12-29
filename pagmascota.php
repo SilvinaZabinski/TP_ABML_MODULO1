@@ -94,8 +94,8 @@ th
                                     <td>".$fila['nombre']."</td>
                                     <td>".$fila['imagen']."</td>
                                     <td>".$fila['estado']."</td>
-                                    <td>Editar</td>
-                                    <td>Eliminar</td>
+                                    <td><input class=button type=submit value=Editar name=Submit></td>
+                                    <td><input class=button type=submit value=Eliminar name=Submit></td>
                                    
                                </tr>";  
                         
@@ -139,4 +139,5 @@ th
     </div>
     <footer> &#169 Crea el Hábito 2020. todos los derechos reservados &#174.
   </footer>
+  <adress> <img src="https://i.pinimg.com/originals/5d/5c/da/5d5cda59ca315dea67786b086b3eceb1.png" alt="Girl in a jacket" width="30" height="30"> Misiones, Argentina</adress><br>	
 </html>
