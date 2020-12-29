@@ -7,7 +7,7 @@
     <link href="Css/index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1 id= "personalizado"> Veterinaria Jumanji </h1>
+      <h1 id= "personalizado"> Veterinaria Jumanji </h1>
     <div class=boton>
     <a href="pagmascota.php">Mascotas</a> 
     </div>
@@ -24,4 +24,3 @@
     <a href="salir.php">Salir</a>
     </div>
     </body>
-</html>
