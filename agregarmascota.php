@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:3306";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -36,8 +36,8 @@ echo "Conexión Exitosa <br>";
         <?php
           $query = $mysqli -> query ("SELECT * FROM especies");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores[idespecie].'">'.$valores[especie].'</option>';
-          }
+            echo '<option value="'.$valores['idespecie'].'">'.$valores['especie'].'</option>';
+                  }
         ?>
       </select>
       <label for="idraza">Raza:</label><br>
@@ -46,7 +46,7 @@ echo "Conexión Exitosa <br>";
         <?php
           $query = $mysqli -> query ("SELECT * FROM razas");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores[idraza].'">'.$valores[raza].'</option>';
+            echo '<option value="'.$valores['idraza'].'">'.$valores['raza'].'</option>';
           }
         ?>
       </select>   
@@ -66,7 +66,7 @@ echo "Conexión Exitosa <br>";
         <?php
           $query = $mysqli -> query ("SELECT * FROM propietarios");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores[idpropietario].'">'.$valores[nombre].'</option>';
+            echo '<option value="'.$valores['idpropietario'].'">'.$valores['nombre'].'</option>';
           }
         ?>
       </select> 
@@ -74,9 +74,8 @@ echo "Conexión Exitosa <br>";
      <input type="checkbox" name="estado" value="1">
      <input type="submit" value="Agregar">
      <br>
-    <div class=boton>
-    <a href="pagmascota.php">Salir</a>
-    </div>
+    <div class=boton> <a href="pagmascota.php">Salir</a>
+     </div>
 </form>
 </body>
 </html>
