@@ -75,7 +75,7 @@ th
                     $totalPaginas = ceil($cantidadTotalElementos / $cantidadMaximaElementosPagina);
 
                     //############## REALIZO LA CONSULTA PARA OBTENER SOLO LOS ELEMENTOS DE LA PAGINA ACTUAL ##############
-                    $sentencia = $mysqli->prepare("SELECT * FROM mascotas LIMIT $offset, $cantidadMaximaElementosPagina");
+                    $sentencia = $mysqli->prepare("SELECT m.idmascota, m.nommascota, e.especie, r.raza, m.sexo, m.pelaje, m.fechanacimiento, m.señasparticulares, p.nombre, m.imagen, m.estado FROM mascotas m Left Join propietarios p ON m.idpropietario = p.idpropietario Left Join especies e on m.idespecie = e.idespecie Left Join razas r on m.idraza = r.idraza where m.estado = 1  LIMIT $offset, $cantidadMaximaElementosPagina");
                     $sentencia->execute();
                     $resultado = $sentencia->get_result();
                     $fila = $resultado->fetch_assoc();
@@ -85,13 +85,13 @@ th
                         echo "  <tr>
                                     <td>".$fila['idmascota']."</td>
                                     <td>".$fila['nommascota']."</td>
-                                    <td>".$fila['idespecie']."</td>
-                                    <td>".$fila['idraza']."</td>
+                                    <td>".$fila['especie']."</td>
+                                    <td>".$fila['raza']."</td>
                                     <td>".$fila['sexo']."</td>
                                     <td>".$fila['pelaje']."</td>
                                     <td>".$fila['fechanacimiento']."</td>
                                     <td>".$fila['señasparticulares']."</td>
-                                    <td>".$fila['idpropietario']."</td>
+                                    <td>".$fila['nombre']."</td>
                                     <td>".$fila['imagen']."</td>
                                     <td>".$fila['estado']."</td>
                                     <td>Editar</td>
