@@ -30,26 +30,20 @@
             bottom: 30%;
         }
             
+        
 
 @font-face {
     font-family: "titulo_personalizado";
-    src: url(fuente_personalizada.ttf)  
-}
+    src: url(fuente_personalizada.ttf)  }
 
 #personalizado {
     font-family: "titulo_personalizado";
-    color: white;
+    color:#563E32;
 }
 
 h1 {
-    
+    text-align: center;
     font-size: 60px;
-    background-color: #fc9973;
-     opacity: 0.7;
-    border-radius: 8px;
-    border-bottom: 3px solid white;
-    padding-left: 10%;
-
 }
 
 
@@ -57,4 +51,7 @@ body {
     background-image: url(index.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+}
+a{
+    text-decoration: none;
 }

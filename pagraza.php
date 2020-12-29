@@ -27,7 +27,7 @@ th
             <tbody>
                 <?php
                     //############## CONEXION A LA BASE ##############
-                    $servername = "localhost:3307";  
+                    $servername = "localhost";  
                     $username = "root";
                     $password = "";
                     $database = "veterinaria";
