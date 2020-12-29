@@ -1,0 +1,14 @@
+.boton {
+    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    padding: 10px 10px; /*espacio alrededor texto*/
+    background-color: #f9fafc; /*color botón*/
+    color: #ffffff; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 50px; /*bordes redondos*/
+    width:150px;
+    text-align: center;
+    display:inline-block;
+    margin: 40 px;
+    }
