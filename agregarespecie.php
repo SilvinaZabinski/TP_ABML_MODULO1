@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost:3306";
+$servername = "localhost:3307";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -21,7 +21,6 @@ echo "Conexión Exitosa <br>";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    
     <link href="diseveterinaria.css" rel="stylesheet" type="text/css" />
   </head>
 <body>  

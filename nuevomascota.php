@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost:3306";
+$servername = "localhost:3307";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -42,7 +42,7 @@ $conn->close();
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <div class=boton>
 	<a href="pagmascota.php">Salir</a>
    </div>
     <script src="script.js"></script>

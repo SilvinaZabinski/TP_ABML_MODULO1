@@ -1,0 +1,54 @@
+
+
+    @font-face{
+        font-family: "botones_index";
+        src: url(fuente_botones.ttf);
+    }
+    
+    .boton {
+        border: 20px solid #C28269;
+    
+        border-bottom: -30px;
+        border-radius: 3px;
+        padding: 10px 10px;
+        background-color: ghostwhite;
+            opacity: 0.9;
+        color: black;
+        text-decoration: none; /*decoración texto*/
+        text-transform: uppercase; /*capitalización texto*/
+        font-family: "botones_index";
+        font-size: 25px;
+        text-align: center;
+        margin: 40 px;
+        width: 300px;
+        height:30px;
+        display: block;
+        position: relative;
+            left: 40%;
+            right: 40%;
+            top: 30%;
+            bottom: 30%;
+        }
+            
+        
+
+@font-face {
+    font-family: "titulo_personalizado";
+    src: url(fuente_personalizada.ttf)  }
+
+#personalizado {
+    font-family: "titulo_personalizado";
+    color:#563E32;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+}
+
+
+body {   
+    background-image: url(index.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}

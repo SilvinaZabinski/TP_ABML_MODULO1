@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>INICIO ABML VETERINARIA</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
-    <link href="font.css" rel="stylesheet"/>
+    <title>VETERINARIA JUMANJI</title>
+    <link href="Css/index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Veterinaria Digital</h1>
+    <h1 id= "personalizado"> Veterinaria Jumanji </h1>
     <div class=boton>
     <a href="pagmascota.php">Mascotas</a> 
     </div>
@@ -24,6 +23,5 @@
     <div class=boton>
     <a href="salir.php">Salir</a>
     </div>
-    <script src="script.js"></script>
     </body>
 </html>
