@@ -86,8 +86,8 @@ th
                                 <td>".$fila['telefono']."</td>
                                 <td>".$fila['email']."</td>
                                 <td>".$fila['estado']."</td>
-                                <td>Editar</td>
-                                <td>Eliminar</td>
+                                td><a href='editarpropietario.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
+                                <td><a href='eliminarpropietario.php'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>>
                             </tr>";        
                                 
                         
