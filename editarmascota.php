@@ -72,7 +72,7 @@ $estado = $fila["estado"];
        <option value="Macho">Macho</option>
      </select><br>
 
-     Pelaje: <input type="text" name="pelaje" value="<?php echo $row['pelaje']; ?>"><br>
+     Pelaje: <input type="text" name="pelaje" value="<?php echo $pelaje; ?>"><br>
      Fecha de nacimiento: <input type="date" name="fechanacimiento" value="<?php echo $fechanacimiento; ?>"><br>
      Señas particulares: <input type="text" name="señasparticulares" value="<?php echo $señasparticulares; ?>"><br> 
      </select>
