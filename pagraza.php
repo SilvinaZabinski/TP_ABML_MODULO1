@@ -80,14 +80,8 @@ th
                                     <td>".$fila['especie']."</td>
                                     <td>".$fila['raza']."</td>
                                     <td>".$fila['imagenraza']."</td>
-<<<<<<< HEAD
                                     <td><a href='editarraza.php?id=".$fila['idraza']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
                                     <td><a href='eliminarraza.php?id=".$fila['idraza']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
-=======
-                                    <td><a href='editarraza.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
-                                    <td><a href='eliminarraza.php'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>>
-                            </tr>";        
->>>>>>> 935059a6d8cd54088cf4146d4dd2e37038814a47
                                 </tr>";        
                                
                         $fila = $resultado->fetch_assoc();

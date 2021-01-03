@@ -17,7 +17,7 @@ $indice= $_POST['indice'];
 $especie = $_POST['especie'];
 
 
-$sql = "UPDATE especies SET especie='$especie', WHERE idespecie='$indice'";
+$sql = "UPDATE especies SET especie='$especie' WHERE idespecie=$indice";
 
 if ($mysqli->query($sql) === TRUE) {
     echo "Especie Modificada";

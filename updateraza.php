@@ -17,7 +17,7 @@ $indice= $_POST['indice'];
 $idespecie = $_POST['idespecie'];
 $raza = $_POST['raza'];
 
-$sql = "UPDATE razas SET idespecie='$idespecie', raza='$raza', WHERE idraza=$indice";
+$sql = "UPDATE razas SET idespecie='$idespecie', raza='$raza' WHERE idraza=$indice";
 
 if ($mysqli->query($sql) === TRUE) {
     echo "Raza Modificada";
