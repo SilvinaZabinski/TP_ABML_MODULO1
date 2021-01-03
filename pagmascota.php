@@ -55,7 +55,7 @@ th
                     }
 
                     //############## DEFINO UN MAXIMO DE ELEMENTOS POR PAGINA ##############
-                    $cantidadMaximaElementosPagina = 5;
+                    $cantidadMaximaElementosPagina = 2;
                     
                     //############## CALCULO VALORES PARA LA PAGINACION ##############
                     $offset = ($paginaNro - 1) * $cantidadMaximaElementosPagina;
@@ -75,6 +75,7 @@ th
                     $totalPaginas = ceil($cantidadTotalElementos / $cantidadMaximaElementosPagina);
 
                     //############## REALIZO LA CONSULTA PARA OBTENER SOLO LOS ELEMENTOS DE LA PAGINA ACTUAL ##############
+                   // $sentencia = $mysqli->prepare("SELECT * FROM mascotas LIMIT $offset, $cantidadMaximaElementosPagina");
                     $sentencia = $mysqli->prepare("SELECT m.idmascota, m.nommascota, e.especie, r.raza, m.sexo, m.pelaje, m.fechanacimiento, m.señasparticulares, p.nombre, m.imagen, m.estado FROM mascotas m Left Join propietarios p ON m.idpropietario = p.idpropietario Left Join especies e on m.idespecie = e.idespecie Left Join razas r on m.idraza = r.idraza where m.estado = 1  LIMIT $offset, $cantidadMaximaElementosPagina");
                     $sentencia->execute();
                     $resultado = $sentencia->get_result();
@@ -84,7 +85,7 @@ th
                     {
                         echo "  <tr>
                                     <td>".$fila['idmascota']."</td>
-                                    <td>".$fila['nommascota']."</td>
+                                    <td>".$fila['nommascota']."</td>  
                                     <td>".$fila['especie']."</td>
                                     <td>".$fila['raza']."</td>
                                     <td>".$fila['sexo']."</td>
@@ -95,8 +96,12 @@ th
                                     <td>".$fila['imagen']."</td>
                                     <td>".$fila['estado']."</td>
                                     <td><a href='editarmascota.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
+<<<<<<< HEAD
+                                    <td><a href='eliminarmascota.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
+=======
                                     <td><a href='eliminarmascota.php'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
                                    
+>>>>>>> 935059a6d8cd54088cf4146d4dd2e37038814a47
                                    
                                </tr>";  
                         
@@ -140,5 +145,9 @@ th
     </div>
     <footer> &#169 Crea el Hábito 2020. todos los derechos reservados &#174.
   </footer>
+<<<<<<< HEAD
+</html>
+=======
   <adress> <img src="https://i.pinimg.com/originals/5d/5c/da/5d5cda59ca315dea67786b086b3eceb1.png" alt="Girl in a jacket" width="30" height="30"> Misiones, Argentina</adress><br>	
 </html>
+>>>>>>> 935059a6d8cd54088cf4146d4dd2e37038814a47

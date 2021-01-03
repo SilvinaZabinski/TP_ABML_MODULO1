@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -17,12 +17,12 @@ $raza = $_POST['raza'];
 
 
 echo "Conexión Exitosa";
- $sql = "INSERT INTO razas (idespecie, raza, imagenraza)
-VALUES ('$idespecie', '$raza', '$imagenraza')";
+ $sql = "INSERT INTO razas (idespecie, raza)
+VALUES ('$idespecie', '$raza')";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Nuevo registro creado";
+    echo "Nueva Raza creada";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
@@ -34,7 +34,7 @@ $conn->close();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Nuevo Propietario</title>
+    <title>Nueva Raza</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>

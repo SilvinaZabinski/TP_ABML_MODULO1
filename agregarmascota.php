@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -9,7 +9,7 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 
 // Chequear conexion
 if ($mysqli->connect_error) {
-  die("Falla de conexión: " . $conn->connect_error);
+  die("Falla de conexión: " . $mysqli->connect_error);
 }
 echo "Conexión Exitosa <br>";
 
@@ -25,28 +25,28 @@ echo "Conexión Exitosa <br>";
     
     <link href="diseveterinaria.css" rel="stylesheet" type="text/css" />
   </head>
-<body>  
+  <body>  
 <form method="post" action="nuevomascota.php"> 
 <h1>Ingreso de datos de la Mascota</h1> 
-  Nombre: <input type="text" name="nommascota"><br>
+  Nombre: <input type="text" name="nombre"><br>
 
-  <label for="idespecie">Especie:</label><br>
-  <select name="idespecie">
+      <label for="idespecie">Especie:</label><br>
+      <select name="idespecie">
         <option value="0">Seleccione:</option>
         <?php
           $query = $mysqli -> query ("SELECT * FROM especies");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores['idespecie'].'">'.$valores['especie'].'</option>';
-                  }
+            echo '<option value="'.$valores[idespecie].'">'.$valores[especie].'</option>';
+          }
         ?>
       </select>
       <label for="idraza">Raza:</label><br>
-     <select name="idraza">
-        <option value="0">Seleccione:</option>
-        <?php
+      <select name="idraza">
+          <option value="0">Seleccione:</option>
+          <?php
           $query = $mysqli -> query ("SELECT * FROM razas");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores['idraza'].'">'.$valores['raza'].'</option>';
+            echo '<option value="'.$valores[idraza].'">'.$valores[raza].'</option>';
           }
         ?>
       </select>   
@@ -66,16 +66,20 @@ echo "Conexión Exitosa <br>";
         <?php
           $query = $mysqli -> query ("SELECT * FROM propietarios");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores['idpropietario'].'">'.$valores['nombre'].'</option>';
+            echo '<option value="'.$valores[idpropietario].'">'.$valores[nombre].'</option>';
           }
         ?>
       </select> 
-     <label for="estado">Estado</label><br>
-     <input type="checkbox" name="estado" value="1">
+      <input type="radio" id="activo" name="estado" value=1>
+      <label for="activo">Activo</label>
+      <input type="radio" id="Inactivo" name="estado" value=0>
+      <label for="inactivo">Inactivo</label><br>
+          
      <input type="submit" value="Agregar">
      <br>
-    <div class=boton> <a href="pagmascota.php">Salir</a>
-     </div>
+    <div class=boton>
+    <a href="pagmascota.php">Salir</a>
+    </div>
 </form>
 </body>
 </html>

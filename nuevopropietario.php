@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -16,7 +16,7 @@ $direccion = $_POST['direccion'];
 $localidad= $_POST['localidad'];
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
-$estado = $_POST['estado'];
+$estado = $_POST['gender'];
 
 echo "Conexión Exitosa";
  $sql = "INSERT INTO propietarios (nombre, direccion, localidad, telefono, email, estado)
@@ -24,7 +24,7 @@ VALUES ('$nombre', '$direccion', '$localidad', '$telefono', '$email', '$estado')
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Nuevo registro creado";
+    echo "Nuevo Propietario Creado";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }

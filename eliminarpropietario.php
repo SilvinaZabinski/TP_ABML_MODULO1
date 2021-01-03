@@ -1,5 +1,5 @@
-<?php
 
+<?php
 $servername = "localhost:3306";
 $username = "root";
 $password = "";
@@ -13,39 +13,30 @@ if ($mysqli->connect_error) {
 }
 echo "Conexión Exitosa <br>";
 
-$nombre = $_POST['nombre'];
-$idespecie = $_POST['idespecie'];
-$idraza = $_POST['idraza'];
-$sexo = $_POST['sexo'];
-$pelaje = $_POST['pelaje'];
-$fechanacimiento = $_POST['fechanacimiento'];
-$señasparticulares = $_POST['señasparticulares'];
-$idpropietario = $_POST['idpropietario'];
-$estado = $_POST['estado'];
-
-
- $sql = "INSERT INTO mascotas (nombre, idespecie, idraza, sexo, pelaje, fechanacimiento, señasparticulares, idpropietario, estado)
-VALUES ('$nombre', '$idespecie', '$idraza', '$sexo', '$pelaje', '$fechanacimiento', '$señasparticulares', '$idpropietario', '$estado')";
+$id= $_GET['id'];
+// Se puede  realizar un DELETE FROM propietarios WHERE idpropietario=$id";//
+// Cambia el estado de 1 a 0//
+$sql = "UPDATE propietarios SET estado = 0 WHERE idpropietario = $id";
 
 
 if ($mysqli->query($sql) === TRUE) {
-    echo "Nueva Mascota Creada";
+    echo "Se eliminó la Mascota";
   } else {
     echo "Error: " . $sql . "<br>" . $mysqli->error;
   }
-
-$mysqli->close();
+  
 ?>
+$mysqli->close();
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Nueva Mascota</title>
+    <title>Se eliminó el Propietario</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class=boton">
-	<a href="pagmascota.php">Salir</a>
+	<a href="pagpropietario.php">Salir</a>
    </div>
     <script src="script.js"></script>
   </body>

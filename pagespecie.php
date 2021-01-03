@@ -9,7 +9,7 @@ th
 <link href="index.css" rel="stylesheet" type="text/css" />
 </head>
     <body>
-        <h1>Alta, Baja y Modificaciones de Razas</h1>
+        <h1>Alta, Baja y Modificaciones de Especies</h1>
         <table class="table table-striped table-bordered">
             <thead>
             <tr>
@@ -75,9 +75,14 @@ th
                         echo "  <tr>
                                     <td>".$fila['idespecie']."</td>
                                     <td>".$fila['especie']."</td>
+<<<<<<< HEAD
+                                    <td><a href='editarespecie.php?id=".$fila['idespecie']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
+                                    <td><a href='eliminarespecie.php?id=".$fila['idespecie']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
+=======
                                     <td><a href='editarespecie.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
                                     <td><a href='eliminarespecie.php'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>>
                             </tr>";        
+>>>>>>> 935059a6d8cd54088cf4146d4dd2e37038814a47
                                 </tr>";        
                                
                         $fila = $resultado->fetch_assoc();

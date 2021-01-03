@@ -13,34 +13,23 @@ if ($mysqli->connect_error) {
 }
 echo "Conexión Exitosa <br>";
 
-$nombre = $_POST['nombre'];
-$idespecie = $_POST['idespecie'];
-$idraza = $_POST['idraza'];
-$sexo = $_POST['sexo'];
-$pelaje = $_POST['pelaje'];
-$fechanacimiento = $_POST['fechanacimiento'];
-$señasparticulares = $_POST['señasparticulares'];
-$idpropietario = $_POST['idpropietario'];
-$estado = $_POST['estado'];
+$id= $_GET['id'];
 
-
- $sql = "INSERT INTO mascotas (nombre, idespecie, idraza, sexo, pelaje, fechanacimiento, señasparticulares, idpropietario, estado)
-VALUES ('$nombre', '$idespecie', '$idraza', '$sexo', '$pelaje', '$fechanacimiento', '$señasparticulares', '$idpropietario', '$estado')";
-
-
+// Se puede  realizar un DELETE FROM mascotas WHERE idmascota=$id";//
+$sql = "UPDATE mascotas SET estado = 0 WHERE idmascota = $id";
 if ($mysqli->query($sql) === TRUE) {
-    echo "Nueva Mascota Creada";
+    echo "Se eliminó la Mascota";
   } else {
     echo "Error: " . $sql . "<br>" . $mysqli->error;
   }
-
-$mysqli->close();
+  
 ?>
+$mysqli->close();
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Nueva Mascota</title>
+    <title>Se eliminó la Mascota</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>

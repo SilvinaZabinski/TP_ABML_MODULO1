@@ -13,7 +13,10 @@
   Localidad: <input type="text" name="localidad"><br>
   Teléfono: <input type="tel" name="telefono"><br>
   E-mail: <input type="email" name="email"><br>
-  Estado: <input type="checkbox" name="estado"><br>
+  <input type="radio" id="activo" name="estado" value=1>
+      <label for="activo">Activo</label><br>
+      <input type="radio" id="inactivo" name="estado" value=0>
+      <label for="inactivo">Inactivo</label><br>
   <br>
   <input type="submit" value="Agregar"> <br> 
   <br>

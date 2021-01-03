@@ -1,18 +1,19 @@
-<?php
 
+<?php
 $servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
 
-// Create connection
+// Crear conexión
 $mysqli = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+// Chequear conexion
 if ($mysqli->connect_error) {
-  die("Connection failed: " . $mysqli->connect_error);
+  die("Falla de conexión: " . $mysqli->connect_error);
 }
 echo "Conexión Exitosa <br>";
 
+$indice= $_POST['indice'];
 $nombre = $_POST['nombre'];
 $idespecie = $_POST['idespecie'];
 $idraza = $_POST['idraza'];
@@ -23,24 +24,22 @@ $señasparticulares = $_POST['señasparticulares'];
 $idpropietario = $_POST['idpropietario'];
 $estado = $_POST['estado'];
 
-
- $sql = "INSERT INTO mascotas (nombre, idespecie, idraza, sexo, pelaje, fechanacimiento, señasparticulares, idpropietario, estado)
-VALUES ('$nombre', '$idespecie', '$idraza', '$sexo', '$pelaje', '$fechanacimiento', '$señasparticulares', '$idpropietario', '$estado')";
-
+$sql = "UPDATE mascotas SET nommascota='$nombre', idespecie='$idespecie', idraza='$idraza', sexo='$sexo', pelaje='$pelaje', fechanacimiento='$fechanacimiento', señasparticulares='$señasparticulares', idpropietario='$idpropietario', estado='$estado' WHERE idmascota=$indice";
 
 if ($mysqli->query($sql) === TRUE) {
-    echo "Nueva Mascota Creada";
+    echo "Mascota Modificada";
   } else {
-    echo "Error: " . $sql . "<br>" . $mysqli->error;
+    echo "Error: " . $sql . "<br>" . $$mysqli->error;
   }
-
+// Cerrar conexion
+// mysqli_close($conn); 
 $mysqli->close();
 ?>
 <html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Nueva Mascota</title>
+    <title>Se Modifico la Mascota</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
