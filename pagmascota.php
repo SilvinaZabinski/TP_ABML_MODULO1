@@ -1,27 +1,22 @@
 <html>
 <head>
-<style>
-th
-    {color: white;
-     background-color: blue;
-    }
-</style>
-<link href="index.css" rel="stylesheet" type="text/css" />
+<meta charset="utf-8">
+<title>Mascotas Spunky</title>
+<link href="Css/pagmascotas.css" rel="stylesheet" type="text/css" />
 </head>
     <body>
-        <h1>Alta, Baja y Modificaciones de Mascotas</h1>
+        <h1 class="personalizado">Alta, Baja y Modificaciones de Mascotas</h1>
         <table class="table table-striped table-bordered">
             <thead>
             <div class=boton>
-            <a href="agregarmascota.php">Agregar</a><br>
-            <br>
+            <a class="agregar" href="agregarmascota.php">Agregar</a>
             </div>
             <tr>
             <th style='width:50px;'>ID</th>
             <th style='width:150px;'>Nombre</th>
             <th style='width:150px;'>Especie</th>
             <th style='width:150px;'>Raza</th>
-            <th style='width:150px;'>Sexo</th>
+            <th style='width:150px;'>Sexo</th> 
             <th style='width:150px;'>Pelaje</th>
             <th style='width:100px;'>Fecha de Nacimiento</th>
             <th style='width:150px;'>Señas particulares</th>
@@ -83,7 +78,7 @@ th
                     while($fila)
                     {
                         echo "  <tr>
-                                    <td>".$fila['idmascota']."</td>
+                                    <td  >".$fila['idmascota']."</td>
                                     <td>".$fila['nommascota']."</td>
                                     <td>".$fila['especie']."</td>
                                     <td>".$fila['raza']."</td>
@@ -119,26 +114,26 @@ th
             ?>
             
             <th>
-                <a <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>>Anterior</a>
+                <a  <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>>Anterior</a>
             </th>
             
             <th>
-                <a <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>>Siguiente</a>
+                <a  <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>>Siguiente</a>
             </th>
         
             <?php 
                 if($paginaNro < $totalPaginas)
                 {
-                    echo "<th><a href='?pagina_nro=$totalPaginas'>Ultima Pagina &rsaquo;&rsaquo;</a></li>";
+                    echo "<th ><a href='?pagina_nro=$totalPaginas'> Ultima Pagina &rsaquo;&rsaquo;</a></li>";
                 } 
             ?>
         </tr>
     </body>
     <br>
     <div class=boton>
-    <a href="index.php">Salir</a>
+    <a  href="index.php">Salir</a>
     </div>
-    <footer> &#169 Crea el Hábito 2020. todos los derechos reservados &#174.
-  </footer>
+   <footer> &#169 Crea el Hábito 2020. Todos los derechos reservados &#174.
+   </footer>
   <adress> <img src="https://i.pinimg.com/originals/5d/5c/da/5d5cda59ca315dea67786b086b3eceb1.png" alt="Girl in a jacket" width="30" height="30"> Misiones, Argentina</adress><br>	
 </html>
