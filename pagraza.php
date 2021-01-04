@@ -17,7 +17,7 @@ th
             <br>
             </div>
             <tr>
-            <th style='width:50px;'>ID</th>
+            <th style='width:50px;'>Idraza</th>
             <th style='width:150px;'>Especie</th>
             <th style='width:150px;'>Raza</th>
             <th style='width:150px;'>Imagen</th>
@@ -67,7 +67,8 @@ th
                     $totalPaginas = ceil($cantidadTotalElementos / $cantidadMaximaElementosPagina);
 
                     //############## REALIZO LA CONSULTA PARA OBTENER SOLO LOS ELEMENTOS DE LA PAGINA ACTUAL ##############
-                    $sentencia = $mysqli->prepare("SELECT * FROM razas LIMIT $offset, $cantidadMaximaElementosPagina");
+                    //$sentencia = $mysqli->prepare("SELECT * FROM razas LIMIT $offset, $cantidadMaximaElementosPagina");
+                    $sentencia = $mysqli->prepare("SELECT r.idraza, e.especie, r.raza, r.imagenraza FROM razas r Left Join especies e on r.idespecie = e.idespecie LIMIT $offset, $cantidadMaximaElementosPagina");
                     $sentencia->execute();
                     $resultado = $sentencia->get_result();
                     $fila = $resultado->fetch_assoc();
@@ -76,12 +77,11 @@ th
                     {
                         echo "  <tr>
                                     <td>".$fila['idraza']."</td>
-                                    <td>".$fila['idespecie']."</td>
+                                    <td>".$fila['especie']."</td>
                                     <td>".$fila['raza']."</td>
                                     <td>".$fila['imagenraza']."</td>
-                                    <td><a href='editarraza.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
-                                    <td><a href='eliminarraza.php'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>>
-                            </tr>";        
+                                    <td><a href='editarraza.php?id=".$fila['idraza']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
+                                    <td><a href='eliminarraza.php?id=".$fila['idraza']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
                                 </tr>";        
                                
                         $fila = $resultado->fetch_assoc();

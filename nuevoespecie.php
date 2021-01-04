@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -20,7 +20,7 @@ VALUES ('$especie')";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Nuevo registro creado";
+    echo "Nueva Especie Creada";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
@@ -32,7 +32,7 @@ $conn->close();
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Nuevo Propietario</title>
+    <title>Nueva Especie</title>
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
