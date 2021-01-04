@@ -6,7 +6,7 @@ th
      background-color: tomato;
     }
 </style>
-<link href="index.css" rel="stylesheet" type="text/css" />
+<link href="Css/index.css" rel="stylesheet" type="text/css" />
 </head>
     <body>
     <h1>Alta, Baja y Modificaciones de Propietarios</h1>
@@ -51,7 +51,7 @@ th
                     }
 
                     //############## DEFINO UN MAXIMO DE ELEMENTOS POR PAGINA ##############
-                    $cantidadMaximaElementosPagina = 2;
+                    $cantidadMaximaElementosPagina = 5;
                     
                     //############## CALCULO VALORES PARA LA PAGINACION ##############
                     $offset = ($paginaNro - 1) * $cantidadMaximaElementosPagina;
@@ -86,14 +86,9 @@ th
                                 <td>".$fila['telefono']."</td>
                                 <td>".$fila['email']."</td>
                                 <td>".$fila['estado']."</td>
-<<<<<<< HEAD
                                 <td><a href='editarpropietario.php?id=".$fila['idpropietario']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
                                 <td><a href='eliminarpropietario.php?id=".$fila['idpropietario']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
                                    
-=======
-                                td><a href='editarpropietario.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
-                                <td><a href='eliminarpropietario.php'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>>
->>>>>>> 935059a6d8cd54088cf4146d4dd2e37038814a47
                             </tr>";        
                                 
                         
