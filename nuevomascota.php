@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost:3306";
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -24,7 +24,7 @@ $idpropietario = $_POST['idpropietario'];
 $estado = $_POST['estado'];
 
 
- $sql = "INSERT INTO mascotas (nombre, idespecie, idraza, sexo, pelaje, fechanacimiento, señasparticulares, idpropietario, estado)
+ $sql = "INSERT INTO mascotas (nommascota, idespecie, idraza, sexo, pelaje, fechanacimiento, señasparticulares, idpropietario, estado)
 VALUES ('$nombre', '$idespecie', '$idraza', '$sexo', '$pelaje', '$fechanacimiento', '$señasparticulares', '$idpropietario', '$estado')";
 
 

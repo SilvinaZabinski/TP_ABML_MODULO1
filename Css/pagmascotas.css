@@ -1,6 +1,7 @@
 body {
     background-image: url(fondo_pagmascotas.jpg);
 }
+
 @font-face {
     font-family: "titulopersonalizado";
     src: url(fuentepersonalizada.otf) 
