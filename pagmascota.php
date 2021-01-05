@@ -90,8 +90,8 @@
                                     <td>".$fila['nombre']."</td>
                                     <td>".$fila['imagen']."</td>
                                     <td>".$fila['estado']."</td>
-                                    <td><a href='editarmascota.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
-                                    <td><a href='eliminarmascota.php?id=".$fila['idmascota']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
+                                    <td><a href='editarmascota.php?id=".$fila['idmascota']."'><img src='Css/icono_editar.jpg' width='30' height='30'></a></td>
+                                    <td><a href='eliminarmascota.php?id=".$fila['idmascota']."'><img src='Css/icono_eliminar.jpg' width='30' height='30'></a></td>
                                </tr>";  
                         
                         $fila = $resultado->fetch_assoc();
@@ -113,11 +113,11 @@
             ?>
             
             <th>
-                <a  <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>>Anterior</a>
+                <a class="mover" <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>><img src='Css/icono_atras.jpg' width='30' height='30'></a>
             </th>
             
             <th>
-                <a  <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>>Siguiente</a>
+                <a class="mover" <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>><img src='Css/icono_siguiente.jpg' width='30' height='30'></a>
             </th>
         
             <?php 
@@ -130,9 +130,6 @@
     </body>
     <br>
     <div class=boton>
-    <a  href="index.php">Salir</a>
-    </div>
-   <footer> &#169 Crea el Hábito 2020. Todos los derechos reservados &#174.
-   </footer>
-  <adress> <img src="https://i.pinimg.com/originals/5d/5c/da/5d5cda59ca315dea67786b086b3eceb1.png" alt="Girl in a jacket" width="30" height="30"> Misiones, Argentina</adress><br>	
+    <a class="salir" href="index.php">SALIR</a>
+    </div>	
 </html>
