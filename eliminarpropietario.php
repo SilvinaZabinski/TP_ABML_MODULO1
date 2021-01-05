@@ -26,7 +26,6 @@ if ($mysqli->query($sql) === TRUE) {
   }
   
 ?>
-$mysqli->close();
 <html>
   <head>
     <meta charset="utf-8">
