@@ -1,6 +1,6 @@
 
 <?php
-$servername = "localhost;
+$servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "veterinaria";
@@ -11,7 +11,7 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
   die("Falla de conexión: " . $mysqli->connect_error);
 }
-echo "Conexión Exitosa <br>";
+
 
 $indice= $_POST['indice'];
 $idespecie = $_POST['idespecie'];
@@ -33,10 +33,10 @@ $mysqli->close();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Se Modico la Raza</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="Css/abm.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <div class="boton">
 	<a href="pagraza.php">Salir</a>
    </div>
     <script src="script.js"></script>

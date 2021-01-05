@@ -1,0 +1,110 @@
+body {
+    background-image: url(fondoraza.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+@font-face {
+    font-family: "titulopersonalizado";
+    src: url(fuentepersonalizada.otf) ;
+}
+@font-face{
+    text-decoration: none;
+    font-family: "botones_index";
+    src: url(fuente_botones.ttf);
+}
+*{
+    padding: 0;
+    margin:0;
+	font-family: "botones_index";
+	text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+form {
+    border:3px solid #ededed;
+    border-radius: 8px;
+    box-shadow: 4px 4px 5px rgb(116, 58, 116);
+	padding: 50px 20px;
+	background-color: #ededed;
+	margin: calc(25% + 100px);
+	margin-top: 10px;
+	padding-top: 28px;
+    margin-bottom: 30px;
+    position: relative;
+        top:15px;
+}
+
+h1 {
+    font-family: "titulopersonalizado";
+    font-size: 35px;
+	text-align: center;
+	padding: 12px;
+    color: black;
+    display: inline;
+}
+
+
+input {
+	width: calc(100% - 20px);
+	padding: 9px;
+	margin: auto;
+	margin-top: 12px;
+	font-size: 16px
+}
+
+input[type='submit']{
+	background-color: #48e;
+	color: #fff;
+    width: 550px;
+	margin:0  10%;
+	margin-top: 22px;
+    border:6px solid  #48e;;
+    font-size: 22px;;
+    margin-left: -18px;
+}
+select {
+	width: calc(100% - 20px);
+	padding: 9px;
+	margin: auto;
+	margin-top: 12px;
+	font-size: 16px
+}
+
+select[type='submit']{
+	background-color: #48e;
+	color: #fff;
+	width: calc(80% - 20px);
+	margin: 0 10%;
+	margin-top: 22px;
+    border: none;
+    font-size: 22px;
+    
+}
+.boton {	
+    background-color: white;
+		color: #48e;
+		margin: 0 10%;
+		border:6px solid  white;
+		text-align: center;
+		width: 520px;
+		padding: 5px;
+		margin: auto;
+		margin-top: 12px;
+        font-size: 16px;
+        margin-left: -18px;
+        
+}
+.labels {
+	color:#444;
+	margin-top: 5px;
+}
+
+.radio-estado input{
+	width: auto;
+	margin-right: 5px;
+}
+.radio-estado label{
+	color:#444;
+}

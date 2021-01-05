@@ -16,7 +16,6 @@ $raza = $_POST['raza'];
 
 
 
-echo "Conexión Exitosa";
  $sql = "INSERT INTO razas (idespecie, raza)
 VALUES ('$idespecie', '$raza')";
 
@@ -35,12 +34,11 @@ $conn->close();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Nueva Raza</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="css/abm.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <div class="boton">
 	<a href="pagraza.php">Salir</a>
    </div>
-    <script src="script.js"></script>
   </body>
 </html>

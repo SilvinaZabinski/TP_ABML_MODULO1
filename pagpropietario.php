@@ -1,11 +1,6 @@
 <html>
     <head>
-    <style>
-    th
-        {color: white;
-        background-color: tomato;
-        }
-    </style>
+   
     <link href="css/pagpropietario.css" rel="stylesheet" type="text/css" />
     </head>
         <body>
