@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 $especie = $_POST['especie'];
 
 
-echo "Conexión Exitosa";
+
  $sql = "INSERT INTO especies (especie)
 VALUES ('$especie')";
 
@@ -33,10 +33,10 @@ $conn->close();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Nueva Especie</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="css/abm.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <div class="boton">
 	<a href="pagespecie.php">Salir</a>
    </div>
     <script src="script.js"></script>

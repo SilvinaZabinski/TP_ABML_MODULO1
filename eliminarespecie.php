@@ -10,7 +10,6 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
   die("Connection failed: " . $mysqli->connect_error);
 }
-echo "Conexión Exitosa <br>";
 
 $id= $_GET['id'];
  $sql = "DELETE FROM especies WHERE idespecie=$id";
@@ -27,10 +26,10 @@ if ($mysqli->query($sql) === TRUE) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Se eliminó la Especie</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="css/abm.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <div class="boton">
 	<a href="pagespecie.php">Salir</a>
    </div>
     <script src="script.js"></script>

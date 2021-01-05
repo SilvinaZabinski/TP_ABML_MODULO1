@@ -72,8 +72,7 @@
                         $totalPaginas = ceil($cantidadTotalElementos / $cantidadMaximaElementosPagina);
 
                         //############## REALIZO LA CONSULTA PARA OBTENER SOLO LOS ELEMENTOS DE LA PAGINA ACTUAL ##############
-                        $sentencia = $mysqli->prepare("SELECT * FROM propietarios LIMIT $offset, $cantidadMaximaElementosPagina");
-                        $sentencia->execute();
+                        $sentencia = $mysqli->prepare("SELECT * FROM propietarios where estado = 1 LIMIT $offset, $cantidadMaximaElementosPagina");
                         $resultado = $sentencia->get_result();
                         $fila = $resultado->fetch_assoc();
 
@@ -105,7 +104,7 @@
                     <?php 
                         if($paginaNro > 1)
                         {
-                            echo "<th><a href='?pagina_nro=1'> <div class= 'pagina'> Primera Pagina </div></h4></a></th>";
+                            echo "<th><a href='?pagina_nro=1'> <div class= 'pagina'> Primera Pagina </div></a></th>";
                         } 
                     ?>
                 </th>

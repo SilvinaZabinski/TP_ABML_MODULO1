@@ -10,7 +10,7 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
   die("Falla de conexión: " . $mysqli->connect_error);
 }
-echo "Conexión Exitosa <br>";
+
 
 // Cerrar conexion
 // mysqli_close($conn); 
@@ -31,7 +31,7 @@ $especie = $fila['especie'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     
-    <link href="diseveterinaria.css" rel="stylesheet" type="text/css" />
+    <link href="css/editarespecie.css" rel="stylesheet" type="text/css" />
   </head>
   <body>  
 <form method="post" action="updateespecie.php"> 

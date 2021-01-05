@@ -6,7 +6,7 @@ th
      background-color: blue;
     }
 </style>
-<link href="index.css" rel="stylesheet" type="text/css" />
+<link href="Css/pagespecie.css" rel="stylesheet" type="text/css" />
 </head>
     <body>
         <h1>Alta, Baja y Modificaciones de Especies</h1>
@@ -15,10 +15,11 @@ th
             <tr>
             <th style='width:50px;'>ID</th>
             <th style='width:150px;'>Especie</th>
-            <th style='width:150px;'>Acciones</th>
+            <th style='width:150px;'>Editar</th>
+            <th style='width:150px;'>Borrar</th>
             </tr>
             </thead>
-            <div class=boton>
+            <div class="agregar">
             <a href="agregarespecie.php">Agregar</a>
             </div>
             <br>
@@ -75,8 +76,8 @@ th
                         echo "  <tr>
                                     <td>".$fila['idespecie']."</td>
                                     <td>".$fila['especie']."</td>
-                                    <td><a href='editarespecie.php?id=".$fila['idespecie']."'><img src='https://png.pngtree.com/png-clipart/20190614/original/pngtree-vector-pencil-icon-png-image_3773618.jpg' width='30' height='30'></a></td>
-                                    <td><a href='eliminarespecie.php?id=".$fila['idespecie']."'><img src='https://png.pngtree.com/png-clipart/20190611/original/pngtree-recycle-bin-material-png-image_3181279.jpg' width='30' height='30'></a></td>
+                                    <td><a href='editarespecie.php?id=".$fila['idespecie']."'><img src='Css/icono_editar.jpg' width='30' height='30'></a></td>
+                                    <td><a href='eliminarespecie.php?id=".$fila['idespecie']."'><img src='Css/icono_eliminar.jpg'  width='30' height='30'></a></td>
                                 </tr>";        
                                
                         $fila = $resultado->fetch_assoc();
@@ -93,27 +94,27 @@ th
             <?php 
                 if($paginaNro > 1)
                 {
-                    echo "<th><a href='?pagina_nro=1'>Primera Pagina</a></th>";
+                    echo "<th><a href='?pagina_nro=1'><div class= 'pagina'> Primera Pagina </div></a></th>";
                 } 
             ?>
             
             <th>
-                <a <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>>Anterior</a>
+                <a class= "mover"<?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>><img src='Css/icono_atras.jpg' width='30' height='30'></a>
             </th>
             
             <th>
-                <a <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>>Siguiente</a>
+                <a class="mover" <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>><img src='Css/icono_siguiente.jpg' width='30' height='30'></a>
             </th>
         
             <?php 
                 if($paginaNro < $totalPaginas)
                 {
-                    echo "<th><a href='?pagina_nro=$totalPaginas'>Ultima Pagina &rsaquo;&rsaquo;</a></li>";
+                    echo "<th><a href='?pagina_nro=$totalPaginas'><div class= 'pagina'>Ultima Pagina </div></a></li>";
                 } 
             ?>
         </tr>
     </body>
-    <div class=boton>
+    <div class="salir">
     <a href="index.php">Salir</a>
     </div>
 </html>

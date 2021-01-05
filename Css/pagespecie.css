@@ -1,0 +1,157 @@
+body {
+    background-image: url(fondoespecie.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+@font-face {
+    font-family: "titulopersonalizado";
+    src: url(fuentepersonalizada.otf) 
+ }
+ @font-face{
+    text-decoration: none;
+    font-family: "botones_index";
+    src: url(fuente_botones.ttf);
+}
+
+h1 {
+    font-family:"botones_index" ;
+    font-size: 55px;
+    display: inline;
+    color:#A62522;
+    background-color:white;
+    border: 7px solid white;
+    padding:6px solid white;
+    border-left:15px solid #A62522; 
+    margin: 5px;
+    position: relative;
+        top: 3px;
+}
+
+table {
+    width: 100%;
+    height: 50%;
+    background-color: whitesmoke;
+    border-collapse: collapse;
+    border: 15px solid #E7C5B1;
+    border-radius: 7px;
+    text-align: center; 
+    font-family: "botones_index";
+    font-size: 20px;
+    box-shadow: 4px 4px 5px rgb(70, 29, 10);
+    position: sticky;
+        top: 100px;
+}
+
+th{
+    background-color: #A62522;
+    color:white;
+    font-size: 22px;
+    border:1px solid white;
+    box-shadow: 2px 2px 3px rgb(248, 246, 246);
+    font-style: normal;
+}
+td{
+    border: 1px solid white;
+    box-shadow: 2px 2px 3px rgb(248, 246, 246);
+
+}
+
+.agregar {
+    border: 15px solid white;
+    border-bottom: -30px;
+    border-radius: 3px;
+    margin: 4px;
+    padding: 6px 3px;
+    background-color: white;
+  
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: "botones_index";
+    font-size: 25px;
+    text-align: center;
+    width: 10%;
+    height:20px;
+    display: block;
+    box-shadow: 7px 7px 8px #052922;
+    position: relative;
+        top:-45px;
+        left: 1200px;
+}
+
+strong{
+    font-family:"botones_index";
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 3px;
+    color:#A62522;
+    font-size: 24px;
+    position: relative;
+        left:630px;
+        top: 10px;
+
+}
+.mover {
+    position: relative;
+        left:750px;
+        top: -23px;
+    background-color: whitesmoke;
+    border: 5px solid whitesmoke;
+    border-radius: 4px;
+
+
+}
+.salir{
+    display: inline;
+    font-family: Impact;
+    color: #A62522;
+    font-size: 23px;
+    background-color:white;
+    border: 10px solid white;
+    border-radius: 2px;
+    border-left: 40PX Solid white;
+    border-right: 40PX Solid white;
+    position: relative;
+        top: 90px;
+        left: 20px;
+    box-shadow: 4px 4px 5px rgb(66, 44, 2)
+}
+
+a:link {
+    color: #A62522;
+    text-decoration: none;
+    font-family: "botones_index"; 
+}
+
+a:visited {
+
+    color: #A62522;
+    text-decoration: none; 
+    font-family: "botones_index"; 
+
+}
+
+
+
+a:active {
+    color: #A62522;
+    text-decoration: none; 
+    font-family: "botones_index"; 
+
+
+}
+
+.pagina{
+    font-family:"botones_index";
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 3px;
+    color:#A62522;
+    font-size: 24px;
+    position: relative;
+        left:750px;
+        top: -25px;
+    display: inline;
+
+}
