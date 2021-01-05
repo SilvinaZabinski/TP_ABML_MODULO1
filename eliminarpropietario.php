@@ -20,7 +20,7 @@ $sql = "UPDATE propietarios SET estado = 0 WHERE idpropietario = $id";
 
 
 if ($mysqli->query($sql) === TRUE) {
-    echo "Se eliminó la Mascota";
+    echo "Se eliminó el propietario";
   } else {
     echo "Error: " . $sql . "<br>" . $mysqli->error;
   }

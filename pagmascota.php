@@ -59,7 +59,7 @@
                     $paginaSiguiente = $paginaNro + 1;
                 
                     //############## REALIZO LA CONSULTA PARA SABER CUANTOS ELEMENTOS HAY EN TOTAL ##############
-                    $sentencia = $mysqli->prepare("SELECT COUNT(*) as cantidad FROM mascotas");
+                    $sentencia = $mysqli->prepare("SELECT COUNT(*) as cantidad FROM mascotas where estado = 1 ");
                     $sentencia->execute();
                     $resultado = $sentencia->get_result();
                     $fila = $resultado->fetch_assoc();

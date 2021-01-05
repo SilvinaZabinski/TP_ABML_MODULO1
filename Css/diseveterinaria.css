@@ -3,6 +3,7 @@
 	margin: 0;
 	font-family: century gothic;
 	text-align: center;
+	text-decoration: none;
 }
 
 form {
@@ -64,4 +65,16 @@ select[type='submit']{
 		margin: auto;
 		margin-top: 12px;
 		font-size: 16px
-    }
+}
+.labels {
+	color:#444;
+	margin-top: 5px;
+}
+
+.radio-estado input{
+	width: auto;
+	margin-right: 5px;
+}
+.radio-estado label{
+	color:#444;
+}
