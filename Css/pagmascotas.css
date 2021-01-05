@@ -112,13 +112,15 @@ strong{
 }
 
 .salir{
-    font-family: Impact;
-    
+   
+    font-family:"botones_index";
     color:#FFFF00;
     font-size: 23px;
     background-color: #00CCFF;
     border: 7px solid #00CCFF;
     border-radius: 2px;
-    
+    position: relative;
+    left:750px;
+    top: -25px;
         box-shadow: 4px 4px 5px rgb(95, 223, 255)
 }

@@ -57,7 +57,7 @@ if ($mysqli->connect_error) {
      <select name="idpropietario">
         <option value="0">Seleccione:</option>
         <?php
-          $query = $mysqli -> query ("SELECT * FROM propietarios");
+          $query = $mysqli -> query ("SELECT * FROM propietarios WHERE estado =1");
           while ($valores = mysqli_fetch_array($query)) {
             echo '<option value="'.$valores['idpropietario'].'">'.$valores['nombre'].'</option>';
           }
