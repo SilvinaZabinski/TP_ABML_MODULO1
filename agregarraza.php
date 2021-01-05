@@ -34,7 +34,7 @@ echo "Conexión Exitosa <br>";
         <?php
           $query = $mysqli -> query ("SELECT * FROM especies");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores[idespecie].'">'.$valores[especie].'</option>';
+            echo '<option value="'.$valores['idespecie'].'">'.$valores['especie'].'</option>';
           }
         ?>
       </select>

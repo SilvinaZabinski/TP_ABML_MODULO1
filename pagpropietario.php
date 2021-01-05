@@ -6,7 +6,7 @@
         background-color: tomato;
         }
     </style>
-    <link href="Css/index.css" rel="stylesheet" type="text/css" />
+    <link href="Css/pagpropietario.css" rel="stylesheet" type="text/css" />
     </head>
         <body>
         <h1>Alta, Baja y Modificaciones de Propietarios</h1>

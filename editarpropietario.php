@@ -21,7 +21,7 @@ $sentencia->execute();
 $resultado = $sentencia->get_result();
 $fila = $resultado->fetch_assoc();
 
-$idmascota=$fila ['idmascota'];
+$idmascota= $fila['idmascota'];
 $idpropietario= $fila['idpropietario'];
 $nombre = $fila['nombre'];
 $direccion = $fila['direccion'];
