@@ -46,7 +46,7 @@ th
                     }
 
                     //############## DEFINO UN MAXIMO DE ELEMENTOS POR PAGINA ##############
-                    $cantidadMaximaElementosPagina = 2;
+                    $cantidadMaximaElementosPagina = 5;
                     
                     //############## CALCULO VALORES PARA LA PAGINACION ##############
                     $offset = ($paginaNro - 1) * $cantidadMaximaElementosPagina;

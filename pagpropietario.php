@@ -68,8 +68,10 @@
 
                         //############## REALIZO LA CONSULTA PARA OBTENER SOLO LOS ELEMENTOS DE LA PAGINA ACTUAL ##############
                         $sentencia = $mysqli->prepare("SELECT * FROM propietarios where estado = 1 LIMIT $offset, $cantidadMaximaElementosPagina");
+                        $sentencia->execute();
                         $resultado = $sentencia->get_result();
                         $fila = $resultado->fetch_assoc();
+                        
 
                         while($fila)
                         {

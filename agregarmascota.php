@@ -16,7 +16,7 @@ if ($mysqli->connect_error) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="Css/editar_mascota.css" rel="stylesheet" type="text/css" />
+    <link href="Css/agregarmascota.css" rel="stylesheet" type="text/css" />
   </head>
   <body>  
 <form method="post" action="nuevomascota.php"> 
