@@ -39,7 +39,7 @@ $estado= $fila["estado"];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     
-    <link href="css/editar_mascota.css" rel="stylesheet" type="text/css" />
+    <link href="css/agregarmascota.css" rel="stylesheet" type="text/css" />
   </head>
   <body>  
 <form action="updatemascota.php" method="post" > 

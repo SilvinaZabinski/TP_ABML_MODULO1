@@ -108,7 +108,7 @@
             <?php 
                 if($paginaNro > 1)
                 {
-                    echo "<th><a href='?pagina_nro=1'>Primera Pagina</a></th>";
+                    echo "<th><a href='?pagina_nro=1'><div class= 'pagina'> Primera Pagina </div></a></th>";
                 } 
             ?>
             
@@ -123,13 +123,13 @@
             <?php 
                 if($paginaNro < $totalPaginas)
                 {
-                    echo "<th ><a href='?pagina_nro=$totalPaginas'> Ultima Pagina &rsaquo;&rsaquo;</a></li>";
+                    echo "<th ><a href='?pagina_nro=$totalPaginas'> <div class= 'pagina'>Ultima Pagina </div></a></li>";
                 } 
             ?>
         </tr>
     </body>
     <br>
-    <div class=boton>
+    <div >
     <a class="salir" href="index.php">SALIR</a>
     </div>	
 </html>

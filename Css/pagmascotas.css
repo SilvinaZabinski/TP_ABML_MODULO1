@@ -82,7 +82,7 @@ td{
     box-shadow: 7px 7px 8px rgb(116, 58, 116);
     position: relative;
         top:-45px;
-        left: 1200px;
+        left: 1000px;
 }
 
 strong{
@@ -111,16 +111,14 @@ strong{
 
 }
 
-
 .salir{
     font-family: Impact;
+    
     color:#FFFF00;
     font-size: 23px;
     background-color: #00CCFF;
     border: 7px solid #00CCFF;
     border-radius: 2px;
-    position: relative;
-        top:100px;
-        left: 50px;
+    
         box-shadow: 4px 4px 5px rgb(95, 223, 255)
 }
