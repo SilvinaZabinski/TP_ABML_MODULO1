@@ -101,31 +101,34 @@
                 <strong>Pagina <?php echo $paginaNro." de ".$totalPaginas; ?></strong>
             </div>
             <tr class="pagination">
-                <?php 
-                    if($paginaNro > 1)
-                    {
-                        echo "<th><a href='?pagina_nro=1'>Primera Pagina</a></th>";
-                    } 
-                ?>
-                
                 <th>
-                    <a <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>>Anterior</a>
+                    <?php 
+                        if($paginaNro > 1)
+                        {
+                            echo "<th><a href='?pagina_nro=1'> <div class= 'pagina'> Primera Pagina </div></h4></a></th>";
+                        } 
+                    ?>
+                </th>
+                <th>
+                    <a class= "mover" <?php if($paginaNro > 1){ echo "href='?pagina_nro=$paginaAnterior'"; } ?>><img src='Css/icono_atras.jpg' width='30' height='30'></a>
                 </th>
                 
                 <th>
-                    <a <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>>Siguiente</a>
+                    <a class= "mover" <?php if($paginaNro < $totalPaginas) { echo "href='?pagina_nro=$paginaSiguiente'";} ?>><img src='Css/icono_siguiente.jpg' width='30' height='30'></a>
                 </th>
-            
-                <?php 
-                    if($paginaNro < $totalPaginas)
-                    {
-                        echo "<th><a href='?pagina_nro=$totalPaginas'>Ultima Pagina &rsaquo;&rsaquo;</a></li>";
-                    } 
-                ?>
+                
+                <th>
+                    <?php 
+                        if($paginaNro < $totalPaginas)
+                        {
+                            echo "<th><a href='?pagina_nro=$totalPaginas'> <div class= 'pagina'>Ultima Pagina </div></a>";
+                        } 
+                    ?>
+                </th>
             </tr>
         </body>
         <br>
-        <div class=boton>
+        <div class="salir">
         <a href="index.php">Salir</a>
         </div>
 </html>

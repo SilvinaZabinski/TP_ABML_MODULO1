@@ -10,7 +10,7 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
   die("Falla de conexión: " . $mysqli->connect_error);
 }
-echo "Conexión Exitosa <br>";
+
 
 // Cerrar conexion
 // mysqli_close($conn); 
@@ -36,7 +36,7 @@ $estado = $fila['estado'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     
-    <link href="diseveterinaria.css" rel="stylesheet" type="text/css" />
+    <link href="css/editarpropietario.css" rel="stylesheet" type="text/css" />
   </head>
   <body>  
 <form method="post" action="updatepropietario.php"> 
@@ -56,16 +56,9 @@ $estado = $fila['estado'];
   <br>
   <input type="submit" value="Guardar cambios"> <br> 
   <br>
-  <div class=boton>
-    <a href="pagpropietario.php">Salir</a>
-    </div>
-  </form>
-</body>
-</html>
-     <input type="submit" value="Guardar Cambios">
-    <div class=boton>
     <a href="pagpropietario.php">Cancelar</a> 
     </div>  
-</form>
+
+  </form>
 </body>
 </html>

@@ -17,7 +17,7 @@ $dbname = "veterinaria";
   $email = $_POST['email'];
   $estado = $_POST['estado'];
 
-  echo "Conexión Exitosa";
+
   $sql = "INSERT INTO propietarios (nombre, direccion, localidad, telefono, email, estado)
   VALUES ('$nombre', '$direccion', '$localidad', '$telefono', '$email', '$estado')";
 
@@ -36,12 +36,11 @@ $dbname = "veterinaria";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Nuevo Propietario</title>
-    <link href="Css/index.css" rel="stylesheet" type="text/css" />
+    <link href="Css/abm.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="boton">
 	<a href="pagpropietario.php">Salir</a>
    </div>
-    <script src="script.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Agregar nuevo propietario</title>
-    <link href="Css/diseveterinaria.css" rel="stylesheet" type="text/css" />
+    <link href="Css/editarpropietario.css" rel="stylesheet" type="text/css" />
     <style>
       .error {color: #FF0000;}
     </style>
