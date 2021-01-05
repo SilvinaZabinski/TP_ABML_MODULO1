@@ -30,7 +30,7 @@ if ($mysqli->query($sql) === TRUE) {
     <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <div class=boton>
 	<a href="pagraza.php">Salir</a>
    </div>
     <script src="script.js"></script>
