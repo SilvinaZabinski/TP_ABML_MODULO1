@@ -11,7 +11,7 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
   die("Falla de conexión: " . $mysqli->connect_error);
 }
-echo "Conexión Exitosa <br>";
+
 
 $indice= $_POST['indice'];
 $nombre = $_POST['nombre'];
@@ -40,12 +40,14 @@ $mysqli->close();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Se Modifico la Mascota</title>
-    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="Css/abm.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <div class=boton">
+    <br>
+    <br>
+    <div class="boton">
 	<a href="pagmascota.php">Salir</a>
    </div>
-    <script src="script.js"></script>
+   
   </body>
 </html>

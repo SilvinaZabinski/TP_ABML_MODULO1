@@ -9,7 +9,6 @@ $mysqli = new mysqli($servername, $username, $password, $dbname);
 if ($mysqli->connect_error) {
   die("Falla de conexión: " . $mysqli->connect_error);
 }
-echo "Conexión Exitosa <br>";
 // Cerrar conexion
 // mysqli_close($conn); 
 ?>
@@ -17,11 +16,11 @@ echo "Conexión Exitosa <br>";
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="Css/diseveterinaria.css" rel="stylesheet" type="text/css" />
+    <link href="Css/editar_mascota.css" rel="stylesheet" type="text/css" />
   </head>
   <body>  
 <form method="post" action="nuevomascota.php"> 
-<h1>Ingreso de datos de la Mascota</h1> 
+<h1>Ingreso de datos de la Mascota</h1> <br>
   Nombre: <input type="text" name="nombre"><br>
 
       <label for="idespecie">Especie:</label><br>

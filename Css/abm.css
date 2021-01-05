@@ -1,14 +1,39 @@
+@font-face {
+    font-family: "titulopersonalizado";
+    src: url(fuentepersonalizada.otf) ;
+}
+@font-face{
+    text-decoration: none;
+    font-family: "botones_index";
+    src: url(fuente_botones.ttf);
+}
+body {
+    background-image: url(cierre.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-size: 40px;
+    color: white;
+    font-family: "titulopersonalizado";   
+}
+
 .boton {
-    border: 1px solid #2e518b; /*anchura, estilo y color borde*/
-    padding: 10px 10px; /*espacio alrededor texto*/
-    background-color: #f9fafc; /*color botón*/
-    color: #ffffff; /*color texto*/
-    text-decoration: none; /*decoración texto*/
-    text-transform: uppercase; /*capitalización texto*/
-    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
-    border-radius: 50px; /*bordes redondos*/
-    width:150px;
+    border: 15px solid  white;
+    border-bottom: -30px;
+    border-radius: 3px;
+    margin: 4px;
+    padding: 6px 3px;
+    background-color:white;
+    color:black;
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-family: "botones_index";
+    font-size: 30px;
     text-align: center;
-    display:inline-block;
-    margin: 40px;
+    width: 15%;
+    height:40px;
+    display: block;
+    box-shadow: 7px 7px 8px rgb(104, 98, 104);
+    position: relative;
+        top:80px;
+        left: 600px;
     }
